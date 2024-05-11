@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HarmonyOS</title>
+    <h1>HarmonyOS</h1>
+
+        
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+           
+            min-height: 100vh;
+            background-color: rgb(0, 0, 0);
+        }
+        h1{
+            color:#5f0eab;
+            font-family: Helvetica;
+            font-size: 150px;
+            position: relative;
+            color: transparent;
+            letter-spacing: -4px;
+            background-image: linear-gradient(to right,rgb(85, 11, 142),rgb(117, 48, 187),rgb(75, 49, 207),rgb(41, 41, 203),white,rgb(132, 226, 231),rgb(13, 185, 194),transparent);
+            background-size: 200% 100%;
+            background-repeat: no-repeat;
+            -webkit-background-clip: text;
+            background-position-x: 200%;
+            animation: 1.7s fillup cubic-bezier(0.42, 0, 0, 1) 0.8s forwards;
+
+        }
+        h1::after{
+            content: 'HarmonyOS';
+            position: absolute;
+            top: 0;
+            left: 0;
+            -webkit-text-stroke: 2px;
+            /*-webkit-text-stroke-color:rgb(255, 255, 255);*/
+            -webkit-text-stroke-color:transparent;
+            -webkit-text-fill-color: transparent;
+            opacity: 0;
+            animation: 1.2s fadein ease-in-out forwards;
+        }
+        @keyframes fillup{
+            from{
+                background-position-x: 200%;
+            }
+            to{
+                background-position-x: 0%;
+            }
+        }
+        @keyframes fadein {
+            from{
+                opacity:0;
+            }
+            to{
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+</body>
+</html>
